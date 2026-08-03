@@ -1,0 +1,185 @@
+:root{
+  --navy:#0E2340;
+  --navy-2:#16324F;
+  --gold:#B8934A;
+  --gold-lt:#D9BE7E;
+  --paper:#FAF9F6;
+  --paper-2:#F1EEE7;
+  --ink:#182430;
+  --graphite:#5A6675;
+  --line:#D8D2C6;
+  --amber:#8A6A1F;
+  --maxw:1080px;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"DM Sans",system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.wrap.narrow{max-width:760px}
+
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* masthead */
+.masthead{background:#fff;border-bottom:1px solid var(--line)}
+.masthead-in{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
+.mark{
+  font-family:"Cormorant Garamond",serif;
+  font-size:30px;font-weight:600;letter-spacing:.06em;
+  color:var(--navy);
+}
+.mark-text{font-size:14px;font-weight:500;color:var(--ink)}
+.mark-sub{font-size:12px;color:var(--graphite);letter-spacing:.08em;text-transform:uppercase}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;padding:72px 0 76px}
+.eyebrow{
+  font-family:"DM Mono",monospace;font-size:12px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gold-lt);margin:0 0 22px;
+}
+.hero h1{
+  font-family:"Cormorant Garamond",serif;
+  font-weight:400;font-size:clamp(34px,5.6vw,58px);
+  line-height:1.1;margin:0 0 22px;letter-spacing:-.01em;
+}
+.lede{max-width:640px;color:#CBD5E1;margin:0 0 44px;font-size:18px}
+
+/* the tool */
+.tool{
+  background:var(--navy-2);
+  border:1px solid rgba(216,210,198,.22);
+  border-left:3px solid var(--gold);
+  padding:28px;max-width:660px;
+}
+.tool-label{
+  display:block;font-family:"DM Mono",monospace;font-size:12px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:10px;
+}
+.tool-help{margin:0 0 18px;font-size:14px;color:#9FB0C4;line-height:1.55}
+#uetr{
+  width:100%;padding:15px 16px;
+  font-family:"DM Mono",monospace;font-size:16px;
+  background:#0A1B31;color:#fff;
+  border:1px solid rgba(216,210,198,.28);border-radius:0;
+}
+#uetr::placeholder{color:#546B87}
+.verdict{margin-top:18px;font-size:15px;min-height:1.6em;line-height:1.6}
+.verdict.ok{color:var(--gold-lt)}
+.verdict.bad{color:#F0B8A8}
+.verdict .why{display:block;color:#9FB0C4;font-size:14px;margin-top:6px}
+
+/* bands */
+.band{padding:76px 0}
+.band-paper{background:var(--paper)}
+.band-quiet{background:var(--paper-2)}
+.band-navy{background:var(--navy);color:#fff}
+
+.band h2{
+  font-family:"Cormorant Garamond",serif;font-weight:400;
+  font-size:clamp(27px,3.4vw,38px);margin:0 0 12px;letter-spacing:-.01em;
+}
+.section-note{color:var(--graphite);max-width:640px;margin:0 0 40px;font-size:16px}
+.band-navy .section-note{color:#9FB0C4}
+
+/* cards */
+.cards{display:grid;gap:20px}
+.card{
+  background:#fff;border:1px solid var(--line);
+  border-top:3px solid var(--gold);
+  padding:28px;
+}
+.card.is-pending{border-top-color:var(--amber);background:#FDFBF6}
+.card-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.card h3{
+  font-family:"Cormorant Garamond",serif;font-weight:600;
+  font-size:26px;margin:0;letter-spacing:.01em;
+}
+.product{font-family:"DM Mono",monospace;font-size:13px;color:var(--graphite)}
+.coverage{margin:14px 0 20px;max-width:62ch}
+.pending-why{
+  margin:14px 0 20px;padding:14px 16px;background:#FBF4E4;
+  border-left:2px solid var(--amber);font-size:15px;color:#5A4A22;max-width:62ch;
+}
+.go{
+  display:inline-block;font-family:"DM Mono",monospace;font-size:13px;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--navy);text-decoration:none;
+  border-bottom:2px solid var(--gold);padding-bottom:3px;
+}
+.go:hover{border-bottom-color:var(--navy)}
+
+/* the stamp: the one repeated device, carrying only true things */
+.stamp{
+  display:flex;flex-wrap:wrap;gap:0;
+  border:1px solid var(--line);margin:0 0 22px;
+}
+.stamp div{
+  flex:1 1 150px;padding:11px 14px;
+  border-right:1px solid var(--line);
+}
+.stamp div:last-child{border-right:0}
+.stamp dt{
+  font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--graphite);margin:0 0 3px;
+}
+.stamp dd{margin:0;font-size:14px;font-weight:500}
+.stamp .yes{color:#1E6B3A}
+.stamp .no{color:#8A2B1F}
+.stamp .unk{color:var(--graphite)}
+.bics{font-family:"DM Mono",monospace;font-size:13px;color:var(--graphite);margin:0 0 6px}
+
+/* claims */
+.claim{border-top:1px solid rgba(216,210,198,.26);padding:24px 0}
+.claim:last-child{border-bottom:1px solid rgba(216,210,198,.26)}
+.claim-head{
+  font-family:"Cormorant Garamond",serif;font-size:23px;
+  color:var(--gold-lt);margin:0 0 8px;
+}
+.claim p:last-child{margin:0;color:#CBD5E1;max-width:64ch}
+
+/* lists */
+.portals{list-style:none;padding:0;margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.portals li{
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding:14px 0;border-bottom:1px solid var(--line);
+}
+.portals .bank{font-weight:500}
+.portals .portal{font-family:"DM Mono",monospace;font-size:13px;color:var(--graphite)}
+
+.excluded{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.excluded li{
+  font-family:"DM Mono",monospace;font-size:13px;color:var(--graphite);
+  border:1px solid var(--line);padding:6px 12px;background:#fff;
+}
+
+.loading{color:var(--graphite)}
+
+/* footer */
+.foot{background:var(--navy);color:#9FB0C4;padding:44px 0;font-size:14px}
+.foot p{margin:0 0 12px;max-width:70ch}
+.foot .fine{font-size:13px;color:#7A8CA3;margin:0}
+.foot a{color:var(--gold-lt)}
+
+@media (max-width:640px){
+  .hero{padding:52px 0 56px}
+  .band{padding:56px 0}
+  .tool{padding:22px}
+  .stamp div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--line)}
+  .stamp div:last-child{border-bottom:0}
+}
