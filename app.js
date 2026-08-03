@@ -134,9 +134,11 @@
 
       document.getElementById('excluded-note').textContent = data.not_bank_operated_note;
       var ex = document.getElementById('excluded');
-      data.not_bank_operated.forEach(function (d) {
+      data.not_bank_operated.forEach(function (x) {
         var li = document.createElement('li');
-        li.textContent = d;
+        li.className = x.tier === 'unidentified' ? 'unidentified' : '';
+        li.innerHTML = '<span class="dom">' + esc(x.domain) + '</span>' +
+                       '<span class="op">' + esc(x.operator) + '</span>';
         ex.appendChild(li);
       });
 
