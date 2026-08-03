@@ -137,6 +137,11 @@
         ex.appendChild(li);
       });
 
+      var words = ['No','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten'];
+      var n = data.trackers.filter(function (t) { return t.status === 'verified'; }).length;
+      var c = document.getElementById('count');
+      if (c) c.textContent = words[n] || String(n);
+
       document.getElementById('reg-date').textContent = data.registry_updated;
     })
     .catch(function () {
