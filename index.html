@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UETR Tracker Registry — bank-operated payment trackers</title>
+<meta name="description" content="A checked list of the banks that run a public UETR payment tracker, with what each one covers and when it was last verified. Maintained by International Finance Bank Ltd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260803a">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead-in">
+    <span class="mark">IFB</span>
+    <span class="mark-text">International Finance Bank Ltd</span>
+    <span class="mark-sub">Compliance Technology</span>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">UETR Tracker Registry</p>
+    <h1>Five banks run a payment tracker<br>you can use without an account.</h1>
+    <p class="lede">Everything else that calls itself a UETR tracker is either behind a client login or is not a bank. This page lists the five, says what each one covers, and records the date each link was last checked.</p>
+
+    <div class="tool" id="tool">
+      <label class="tool-label" for="uetr">Check the shape of a UETR</label>
+      <p class="tool-help">Runs in your browser. Nothing is sent anywhere. This checks the format only — it cannot tell you whether a payment exists.</p>
+      <input type="text" id="uetr" spellcheck="false" autocomplete="off"
+             placeholder="e.g. 8f14e45f-ceea-4670-a01c-9d9b1a4f7d2e"
+             aria-describedby="verdict">
+      <div id="verdict" class="verdict" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-paper">
+  <div class="wrap">
+    <h2>The registry</h2>
+    <p class="section-note">Bank-operated trackers only. Sorted by how much use they are to someone verifying a document they did not send.</p>
+    <div id="registry" class="cards">
+      <p class="loading">Loading the registry…</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-navy">
+  <div class="wrap narrow">
+    <h2>What a tracker result proves</h2>
+
+    <div class="claim">
+      <p class="claim-head">No record found</p>
+      <p>Decisive only when the bank you queried is the institution named on the document as the ordering or beneficiary bank. In that case the payment does not exist in that bank's systems. Against any other bank it means the payment did not pass through that bank, which is not the same thing.</p>
+    </div>
+
+    <div class="claim">
+      <p class="claim-head">A record found</p>
+      <p>Confirms a payment carrying that reference exists. It does not confirm that the amount, the beneficiary, the value date or the purpose match the document in front of you. Compare every field.</p>
+    </div>
+
+    <div class="claim">
+      <p class="claim-head">An acknowledgement</p>
+      <p>Swift acknowledges that a message was well formed and accepted by the network. It is not a credit, not a settlement, and not proof that money moved. Documents that present an acknowledgement as a completed transfer are the most common form of payment-confirmation fraud.</p>
+    </div>
+
+    <div class="claim">
+      <p class="claim-head">A screenshot</p>
+      <p>Proves nothing on its own. Run the query yourself, from a link on this page, and keep the address bar and the timestamp in view. Forged tracker screenshots circulate alongside forged MT103 advices.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-paper">
+  <div class="wrap">
+    <h2>Behind a client login</h2>
+    <p class="section-note" id="portal-note"></p>
+    <ul id="portals" class="portals"></ul>
+  </div>
+</section>
+
+<section class="band band-quiet">
+  <div class="wrap narrow">
+    <h2>Not on this list</h2>
+    <p class="section-note" id="excluded-note"></p>
+    <ul id="excluded" class="excluded"></ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Maintained by International Finance Bank Ltd. Registry last updated <span id="reg-date">—</span>. Links are re-checked weekly.</p>
+    <p class="fine">Swift, UETR and gpi are trademarks of S.W.I.F.T. SC. This registry is not affiliated with S.W.I.F.T. SC or with any bank listed. No tracking service is sold or operated here. Found a broken link or a bank we have missed? Write to <a href="mailto:Info@infiba.com">Info@infiba.com</a>.</p>
+  </div>
+</footer>
+
+<script src="app.js?v=20260803a"></script>
+</body>
+</html>
