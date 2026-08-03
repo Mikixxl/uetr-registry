@@ -90,7 +90,10 @@
       '</div>' +
       '<p class="bics">BIC ' + t.bic_prefixes.map(esc).join(' · ') + '</p>' +
       stamp +
-      '<p class="coverage">' + esc(t.coverage) + '</p>' +
+      '<p class="coverage">' + esc(t.coverage) +
+        (t.retention_window ? ' Only payments up to ' + esc(t.retention_window) +
+          ' old can be traced.' : '') + '</p>' +
+      (t.bank_disclaimer ? '<p class="disclaimer">' + esc(t.bank_disclaimer) + '</p>' : '') +
       (pending ? '<p class="pending-why">' + esc(t.pending_reason) + '</p>' : '') +
       '<a class="go" href="' + esc(t.url) + '" target="_blank" rel="noopener noreferrer">' +
         'Open ' + esc(t.bank) + ' tracker' +
