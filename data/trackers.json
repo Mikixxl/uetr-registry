@@ -286,5 +286,27 @@
     "case": "lowercase",
     "swift_field": "MT block 3, field 121 / pacs.008 message envelope",
     "mandatory_since": "2018-11-18"
-  }
+  },
+  "false_negative_causes": [
+    {
+      "cause": "settling_delay",
+      "detail": "A payment can be absent from a tracker for several minutes after initiation. BNY documents a minimum six-minute wait before a first tracking call and warns that an earlier call may return Record Not Found.",
+      "engine_rule": "Reject any negative finding on a payment whose value date is the current day until the settling window has passed."
+    },
+    {
+      "cause": "retention_window",
+      "detail": "Trackers hold a limited history. NatWest traces payments up to 120 working days old and refers anything older to customer service.",
+      "engine_rule": "Compare the document's value date against the tracker's retention window before weighing a negative finding. Outside the window, a nil result carries no evidential weight."
+    },
+    {
+      "cause": "out_of_scope_institution",
+      "detail": "A tracker reports only the leg its own bank handled.",
+      "engine_rule": "A negative finding counts only where the queried bank is named on the document as ordering or beneficiary bank."
+    },
+    {
+      "cause": "non_swift_rail",
+      "detail": "Domestic and regional rails carry no UETR. SEPA, Faster Payments, Fedwire and RTP are outside SWIFT tracking.",
+      "engine_rule": "Confirm the document asserts a SWIFT cross-border payment before treating a nil result as meaningful."
+    }
+  ]
 }
