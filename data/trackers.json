@@ -216,6 +216,29 @@
       "last_verified": null,
       "evidence_url": "https://www.commbank.com.au/business-banking/paymenttracker/",
       "engine_weight": "unconfirmed"
+    },
+    {
+      "id": "citi-inquiry-portal",
+      "bank": "Citi",
+      "legal_name": "Citibank, N.A.",
+      "bic_prefixes": [
+        "CITI"
+      ],
+      "product": "Citi Inquiry Portal (CIP)",
+      "url": "https://www.citidirect.com/cip/",
+      "login_required": null,
+      "third_parties_permitted": null,
+      "third_party_basis": "Not established.",
+      "search_by": [
+        "uetr"
+      ],
+      "coverage": "Payments processed by Citi. Distinct from CitiDirect itself, which requires a client login.",
+      "country": "US",
+      "status": "pending",
+      "pending_reason": "Endpoint resolves and serves the inquiry application without redirecting to a login. Whether it returns a result to an unauthenticated query has not been confirmed by direct test.",
+      "last_verified": null,
+      "evidence_url": "https://www.citidirect.com/cip/",
+      "engine_weight": "unconfirmed"
     }
   ],
   "client_portal_only": [
@@ -306,7 +329,7 @@
       ]
     }
   ],
-  "client_portal_note": "These institutions expose UETR status only inside an authenticated client portal. Listed so that a reader who finds no public tracker for their bank knows the reason, and stops searching for one that does not exist.",
+  "client_portal_note": "These institutions expose UETR status inside an authenticated client portal. Treat this list as weaker than the registry above: it records where we have found no open tracker, which is not the same as establishing that none exists. Several banks run a public tracker on a separate subdomain without advertising it, and three entries have already moved off this list onto the registry. If you know of an open tracker missing here, tell us.",
   "not_bank_operated": [
     "trackmyswift.com",
     "trackswift-online.com",
