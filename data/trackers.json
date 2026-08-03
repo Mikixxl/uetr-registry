@@ -193,6 +193,29 @@
       "last_verified": "2026-08-03",
       "evidence_url": "https://www.natwest.com/business/support-centre/making-and-accepting-payments/electronic-payments/international-transfers/international-payment-tracker.html",
       "engine_weight": "primary"
+    },
+    {
+      "id": "commbank-payment-tracker",
+      "bank": "Commonwealth Bank of Australia",
+      "legal_name": "Commonwealth Bank of Australia",
+      "bic_prefixes": [
+        "CTBA"
+      ],
+      "product": "Payment Tracker",
+      "url": "https://www.commbank.com.au/business-banking/paymenttracker/",
+      "login_required": null,
+      "third_parties_permitted": null,
+      "third_party_basis": "Not established.",
+      "search_by": [
+        "uetr"
+      ],
+      "coverage": "International money transfers handled by CommBank, inbound and outbound. Distinct from the UETR tracking inside NetBank and CommBiz, which requires a client login.",
+      "country": "AU",
+      "status": "pending",
+      "pending_reason": "Endpoint resolves and serves the tracker application without redirecting to a login. Whether it returns a result to an unauthenticated query has not been confirmed by direct test.",
+      "last_verified": null,
+      "evidence_url": "https://www.commbank.com.au/business-banking/paymenttracker/",
+      "engine_weight": "unconfirmed"
     }
   ],
   "client_portal_only": [
@@ -266,6 +289,20 @@
       "portal": "Corporate Portal — International Payments Tracking",
       "bic_prefixes": [
         "UNCR"
+      ]
+    },
+    {
+      "bank": "OCBC",
+      "portal": "OCBC Velocity",
+      "bic_prefixes": [
+        "OCBC"
+      ]
+    },
+    {
+      "bank": "Commonwealth Bank of Australia",
+      "portal": "NetBank / CommBiz",
+      "bic_prefixes": [
+        "CTBA"
       ]
     }
   ],
