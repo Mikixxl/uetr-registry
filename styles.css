@@ -183,3 +183,8 @@ a{color:inherit}
   .stamp div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--line)}
   .stamp div:last-child{border-bottom:0}
 }
+
+.disclaimer{
+  margin:0 0 20px;font-size:14px;color:var(--graphite);
+  border-left:2px solid var(--line);padding-left:14px;max-width:62ch;
+}
