@@ -146,6 +146,53 @@
       "last_verified": null,
       "evidence_url": "https://accessportal.jpmorgan.com/PaymentTracker/",
       "engine_weight": "unconfirmed"
+    },
+    {
+      "id": "unicredit-payfx",
+      "bank": "UniCredit",
+      "legal_name": "UniCredit S.p.A.",
+      "bic_prefixes": [
+        "UNCR"
+      ],
+      "product": "PayFX Payment Tracking",
+      "url": "https://payfx.unicredit.eu/payment-tracking/search",
+      "login_required": null,
+      "third_parties_permitted": null,
+      "third_party_basis": "Not established.",
+      "search_by": [
+        "uetr"
+      ],
+      "coverage": "Payments processed by UniCredit. Distinct from the International Payments Tracking service inside the UniCredit Corporate Portal, which requires a client login.",
+      "country": "IT",
+      "status": "pending",
+      "pending_reason": "Endpoint resolves and serves the tracker application without redirecting to a login. Whether it returns a result to an unauthenticated query has not been confirmed by direct test.",
+      "last_verified": null,
+      "evidence_url": "https://payfx.unicredit.eu/payment-tracking/search",
+      "engine_weight": "unconfirmed"
+    },
+    {
+      "id": "natwest-international-payment-tracker",
+      "bank": "NatWest",
+      "legal_name": "National Westminster Bank plc",
+      "bic_prefixes": [
+        "NWBK"
+      ],
+      "product": "International payment tracker",
+      "url": "https://www.natwest.com/business/support-centre/making-and-accepting-payments/electronic-payments/international-transfers/international-payment-tracker.html",
+      "login_required": false,
+      "third_parties_permitted": true,
+      "third_party_basis": "Bank instructs senders to share the UETR and tracking link with the recipient, and tells the recipient to obtain the UETR from the remitter. The beneficiary is an intended user.",
+      "search_by": [
+        "uetr"
+      ],
+      "coverage": "International SWIFT payments handled by NatWest, inbound and outbound. SEPA and Faster Payments are not covered. Free of charge.",
+      "retention_window": "120 working days",
+      "bank_disclaimer": "NatWest states the tracker is for informational purposes only, that details are not real-time and may be delayed, and that they cannot be relied on or guaranteed.",
+      "country": "GB",
+      "status": "verified",
+      "last_verified": "2026-08-03",
+      "evidence_url": "https://www.natwest.com/business/support-centre/making-and-accepting-payments/electronic-payments/international-transfers/international-payment-tracker.html",
+      "engine_weight": "primary"
     }
   ],
   "client_portal_only": [
@@ -187,13 +234,6 @@
       ]
     },
     {
-      "bank": "NatWest",
-      "portal": "Bankline",
-      "bic_prefixes": [
-        "NWBK"
-      ]
-    },
-    {
       "bank": "Lloyds",
       "portal": "Commercial Banking Online",
       "bic_prefixes": [
@@ -219,6 +259,13 @@
       "portal": "businessONLINE Payment Tracker",
       "bic_prefixes": [
         "MEBL"
+      ]
+    },
+    {
+      "bank": "UniCredit",
+      "portal": "Corporate Portal — International Payments Tracking",
+      "bic_prefixes": [
+        "UNCR"
       ]
     }
   ],
