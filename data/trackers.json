@@ -123,16 +123,32 @@
       "last_verified": null,
       "evidence_url": "https://www.wellsfargo.com/paymenttracker",
       "engine_weight": "unconfirmed"
+    },
+    {
+      "id": "jpmorgan-payment-tracker",
+      "bank": "J.P. Morgan",
+      "legal_name": "JPMorgan Chase Bank, N.A.",
+      "bic_prefixes": [
+        "CHAS"
+      ],
+      "product": "Payment Tracker",
+      "url": "https://accessportal.jpmorgan.com/PaymentTracker/",
+      "login_required": null,
+      "third_parties_permitted": null,
+      "third_party_basis": "Not established.",
+      "search_by": [
+        "uetr"
+      ],
+      "coverage": "Payments processed by J.P. Morgan.",
+      "country": "US",
+      "status": "pending",
+      "pending_reason": "Endpoint resolves and serves the tracker application without redirecting to a login. Whether it returns a result to an unauthenticated query has not been confirmed by direct test.",
+      "last_verified": null,
+      "evidence_url": "https://accessportal.jpmorgan.com/PaymentTracker/",
+      "engine_weight": "unconfirmed"
     }
   ],
   "client_portal_only": [
-    {
-      "bank": "J.P. Morgan",
-      "portal": "J.P. Morgan ACCESS / Chase Connect",
-      "bic_prefixes": [
-        "CHAS"
-      ]
-    },
     {
       "bank": "Citi",
       "portal": "CitiDirect",
