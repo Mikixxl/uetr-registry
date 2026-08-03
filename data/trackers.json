@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0",
+  "registry_updated": "2026-08-03",
+  "maintainer": "International Finance Bank Ltd — Compliance Technology",
+  "scope_note": "Bank-operated UETR payment trackers only. No aggregators, no affiliate links, no resellers.",
+  "trackers": [
+    {
+      "id": "bny-instanttrack",
+      "bank": "BNY",
+      "legal_name": "The Bank of New York Mellon Corporation",
+      "bic_prefixes": [
+        "IRVT"
+      ],
+      "product": "InstantTrack",
+      "url": "https://instanttrack.bny.com/",
+      "login_required": false,
+      "third_parties_permitted": true,
+      "third_party_basis": "Product description names senders, beneficiaries or third parties as permitted users.",
+      "search_by": [
+        "uetr"
+      ],
+      "coverage": "Payments processed by BNY. USD, GBP, EUR and 120+ further currencies.",
+      "country": "US",
+      "status": "verified",
+      "last_verified": "2026-08-03",
+      "evidence_url": "https://instanttrack.bny.com/",
+      "engine_weight": "primary"
+    },
+    {
+      "id": "deutsche-bank-ipt",
+      "bank": "Deutsche Bank",
+      "legal_name": "Deutsche Bank AG",
+      "bic_prefixes": [
+        "DEUT"
+      ],
+      "product": "International Payment Tracking",
+      "url": "https://corporates.db.com/solutions/Client-access-solutions/international-payment-tracking/standalone-new",
+      "login_required": false,
+      "third_parties_permitted": null,
+      "third_party_basis": "Described as available to clients and their customers. Third-party use not addressed either way.",
+      "search_by": [
+        "uetr",
+        "payment_details"
+      ],
+      "payment_details_fields": [
+        "payment_reference",
+        "creation_date",
+        "instructed_amount",
+        "currency"
+      ],
+      "coverage": "Cross-border payments processed through the Deutsche Bank branch network.",
+      "country": "DE",
+      "status": "verified",
+      "last_verified": "2026-08-03",
+      "evidence_url": "https://corporates.db.com/solutions/client-access-solutions/international-payment-tracking/",
+      "engine_weight": "primary"
+    },
+    {
+      "id": "standard-chartered-gpi-track",
+      "bank": "Standard Chartered",
+      "legal_name": "Standard Chartered PLC",
+      "bic_prefixes": [
+        "SCBL"
+      ],
+      "product": "SC GPI Track",
+      "url": "https://s2b.standardchartered.com/unifiedlogin/psp/index.html#/psp",
+      "login_required": false,
+      "third_parties_permitted": true,
+      "third_party_basis": "Bank states the portal serves its clients and their counterparties.",
+      "search_by": [
+        "uetr"
+      ],
+      "coverage": "Cross-border payments cleared through Standard Chartered's major clearing centres.",
+      "country": "GB",
+      "status": "verified",
+      "last_verified": "2026-08-03",
+      "evidence_url": "https://www.sc.com/en/press-release/weve-introduced-a-public-portal-for-real-time-tracking-of-cross-border-payments/",
+      "engine_weight": "primary"
+    },
+    {
+      "id": "santander-onetrade",
+      "bank": "Santander",
+      "legal_name": "Banco Santander S.A.",
+      "bic_prefixes": [
+        "BSCH",
+        "ABBY"
+      ],
+      "product": "One Trade — Track payment by UETR",
+      "url": "https://santanderonetrade.com/public/s/?language=en_US",
+      "login_required": false,
+      "third_parties_permitted": null,
+      "third_party_basis": "Served from a public path. Third-party use not addressed either way.",
+      "search_by": [
+        "uetr"
+      ],
+      "coverage": "SWIFT payments visible to Santander, including payments not yet received by the bank.",
+      "country": "ES",
+      "status": "verified",
+      "last_verified": "2026-08-03",
+      "evidence_url": "https://santanderonetrade.com/public/s/?language=en_US",
+      "engine_weight": "primary"
+    },
+    {
+      "id": "wells-fargo-payment-gps",
+      "bank": "Wells Fargo",
+      "legal_name": "Wells Fargo Bank, N.A.",
+      "bic_prefixes": [
+        "WFBI"
+      ],
+      "product": "Payment GPS",
+      "url": "https://www.wellsfargo.com/paymenttracker",
+      "resolved_url": "https://cyberinquiry.ceo.wellsfargo.com/inquiry/paymentgps?utm_medium=www-redirect&utm_source=paymenttracker",
+      "login_required": null,
+      "third_parties_permitted": null,
+      "third_party_basis": "Not established.",
+      "search_by": [
+        "uetr"
+      ],
+      "coverage": "Payments processed by Wells Fargo.",
+      "country": "US",
+      "status": "pending",
+      "pending_reason": "Endpoint resolves and loads. Whether it returns a result to an unauthenticated query has not been confirmed by direct test.",
+      "last_verified": null,
+      "evidence_url": "https://www.wellsfargo.com/paymenttracker",
+      "engine_weight": "unconfirmed"
+    }
+  ],
+  "client_portal_only": [
+    {
+      "bank": "J.P. Morgan",
+      "portal": "J.P. Morgan ACCESS / Chase Connect",
+      "bic_prefixes": [
+        "CHAS"
+      ]
+    },
+    {
+      "bank": "Citi",
+      "portal": "CitiDirect",
+      "bic_prefixes": [
+        "CITI"
+      ]
+    },
+    {
+      "bank": "HSBC",
+      "portal": "HSBCnet",
+      "bic_prefixes": [
+        "HBUK",
+        "MIDL",
+        "HSBC"
+      ]
+    },
+    {
+      "bank": "Bank of America",
+      "portal": "CashPro",
+      "bic_prefixes": [
+        "BOFA"
+      ]
+    },
+    {
+      "bank": "Barclays",
+      "portal": "Barclays iPortal",
+      "bic_prefixes": [
+        "BARC"
+      ]
+    },
+    {
+      "bank": "BNP Paribas",
+      "portal": "Connexis Cash",
+      "bic_prefixes": [
+        "BNPA"
+      ]
+    },
+    {
+      "bank": "NatWest",
+      "portal": "Bankline",
+      "bic_prefixes": [
+        "NWBK"
+      ]
+    },
+    {
+      "bank": "Lloyds",
+      "portal": "Commercial Banking Online",
+      "bic_prefixes": [
+        "LOYD"
+      ]
+    },
+    {
+      "bank": "Santander UK",
+      "portal": "Corporate Online Banking Payments Tracker",
+      "bic_prefixes": [
+        "ABBY"
+      ]
+    },
+    {
+      "bank": "Standard Chartered",
+      "portal": "Straight2Bank",
+      "bic_prefixes": [
+        "SCBL"
+      ]
+    },
+    {
+      "bank": "Emirates Islamic",
+      "portal": "businessONLINE Payment Tracker",
+      "bic_prefixes": [
+        "MEBL"
+      ]
+    }
+  ],
+  "client_portal_note": "These institutions expose UETR status only inside an authenticated client portal. Listed so that a reader who finds no public tracker for their bank knows the reason, and stops searching for one that does not exist.",
+  "not_bank_operated": [
+    "trackmyswift.com",
+    "trackswift-online.com",
+    "swifttraceonline.com",
+    "instantswifttrace.com",
+    "ohmyfin.ai",
+    "ohmyfin.org",
+    "uetr.ai"
+  ],
+  "not_bank_operated_note": "Independent services, not banks. Several of the domains above carry near-identical copy under different names, and at least one brand appears under two unrelated corporate registrations. None of them is affiliated with Swift. They are excluded from the registry on principle, not on quality: this registry lists bank-operated trackers only.",
+  "uetr_format": {
+    "specification": "RFC 4122 UUID version 4",
+    "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+    "case": "lowercase",
+    "swift_field": "MT block 3, field 121 / pacs.008 message envelope",
+    "mandatory_since": "2018-11-18"
+  }
+}
