@@ -331,15 +331,48 @@
   ],
   "client_portal_note": "These institutions expose UETR status inside an authenticated client portal. Treat this list as weaker than the registry above: it records where we have found no open tracker, which is not the same as establishing that none exists. Several banks run a public tracker on a separate subdomain without advertising it, and three entries have already moved off this list onto the registry. If you know of an open tracker missing here, tell us.",
   "not_bank_operated": [
-    "trackmyswift.com",
-    "trackswift-online.com",
-    "swifttraceonline.com",
-    "instantswifttrace.com",
-    "ohmyfin.ai",
-    "ohmyfin.org",
-    "uetr.ai"
+    {
+      "domain": "ohmyfin.ai",
+      "operator": "Ohmyfin Limited, England & Wales, Co. No. 15431563",
+      "tier": "named_operator"
+    },
+    {
+      "domain": "uetr.ai",
+      "operator": "Sempre Relevante - Unipessoal Lda, Portugal",
+      "tier": "named_operator"
+    },
+    {
+      "domain": "ohmyfin.org",
+      "operator": "Claims Ohmyfin Organisation LLC, Hawaii. Same brand as ohmyfin.ai under an unrelated registration.",
+      "tier": "unidentified"
+    },
+    {
+      "domain": "trackmyswift.com",
+      "operator": "Not identified",
+      "tier": "unidentified"
+    },
+    {
+      "domain": "trackswift-online.com",
+      "operator": "Not identified",
+      "tier": "unidentified"
+    },
+    {
+      "domain": "swifttraceonline.com",
+      "operator": "Not identified",
+      "tier": "unidentified"
+    },
+    {
+      "domain": "instantswifttrace.com",
+      "operator": "Not identified",
+      "tier": "unidentified"
+    },
+    {
+      "domain": "swiftlocations.com",
+      "operator": "Not identified. Advertises “our correspondent banks” beside six unlabelled logo images.",
+      "tier": "unidentified"
+    }
   ],
-  "not_bank_operated_note": "Independent services, not banks. Several of the domains above carry near-identical copy under different names, and at least one brand appears under two unrelated corporate registrations. None of them is affiliated with Swift. They are excluded from the registry on principle, not on quality: this registry lists bank-operated trackers only.",
+  "not_bank_operated_note": "None of these is a bank and none is affiliated with Swift. The first group names a real operating company and states what it does; they are excluded because this registry lists bank-operated trackers only, not because of any doubt about them. The second group does not identify who runs it. Several share near-identical wording under different names. Before entering a UETR, amount, currency and value date anywhere, consider what those four fields are: exactly what someone needs to compose a convincing forged payment advice. Query the bank named on your document instead.",
   "uetr_format": {
     "specification": "RFC 4122 UUID version 4",
     "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
