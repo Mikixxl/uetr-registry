@@ -162,11 +162,14 @@ a{color:inherit}
 .portals .bank{font-weight:500}
 .portals .portal{font-family:"DM Mono",monospace;font-size:13px;color:var(--graphite)}
 
-.excluded{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.excluded{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .excluded li{
-  font-family:"DM Mono",monospace;font-size:13px;color:var(--graphite);
-  border:1px solid var(--line);padding:6px 12px;background:#fff;
+  border:1px solid var(--line);padding:10px 14px;background:#fff;
+  display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;
 }
+.excluded li.unidentified{border-left:3px solid var(--amber)}
+.excluded .dom{font-family:"DM Mono",monospace;font-size:13px;color:var(--ink)}
+.excluded .op{font-size:13px;color:var(--graphite)}
 
 .loading{color:var(--graphite)}
 
