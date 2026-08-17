@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "registry_updated": "2026-08-03",
+  "registry_updated": "2026-08-17",
   "maintainer": "International Finance Bank Ltd — Compliance Technology",
   "scope_note": "Bank-operated UETR payment trackers only. No aggregators, no affiliate links, no resellers.",
   "trackers": [
@@ -98,7 +98,9 @@
       "status": "verified",
       "last_verified": "2026-08-03",
       "evidence_url": "https://santanderonetrade.com/public/s/?language=en_US",
-      "engine_weight": "primary"
+      "engine_weight": "primary",
+      "probe_exempt": true,
+      "probe_note": "Salesforce-edge blocks datacenter clients at connection level (URLError from GH runners since 2026-08-10). Site confirmed alive for human traffic 2026-08-17. Re-verify manually."
     },
     {
       "id": "wells-fargo-payment-gps",

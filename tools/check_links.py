@@ -41,9 +41,10 @@ def main() -> int:
             if not url:
                 continue
             ok, detail = probe(url)
-            flag = "ok  " if ok else "DEAD"
+            exempt = t.get("probe_exempt", False)
+            flag = "ok  " if ok else ("GATE" if exempt else "DEAD")
             print(f"{flag} {t['id']:<32} {key:<13} {detail:<12} {url}")
-            if not ok and t.get("status") == "verified":
+            if not ok and t.get("status") == "verified" and not exempt:
                 failures.append(f"{t['id']} ({key}): {detail}")
 
     if failures:
